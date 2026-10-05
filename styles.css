@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6.3vh 1.5vw;
+  background: #ffffff;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculator {
+  width: min(400px, calc(100vw - 16px));
+  min-height: 688px;
+  margin: 8px auto;
+  padding: 116px 20px 39px;
+  overflow: hidden;
+  border-radius: 30px;
+  background: #000000;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
+}
+
+.display {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  margin: 0 0 29px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 9px;
+  border-style: none;
+  outline: none;
+  background: #333333;
+  color: #ffffff;
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: right;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-auto-rows: 60px;
+  justify-content: space-between;
+  row-gap: 30px;
+}
+
+.key {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #4b4b4b;
+  color: #ffffff;
+  cursor: pointer;
+  font: 20px/60px Arial, Helvetica, sans-serif;
+  text-align: center;
+  transition: transform 80ms ease, filter 80ms ease;
+}
+
+.key-light {
+  background: #bdbdbd;
+  color: #111111;
+}
+
+.key-operator {
+  background: #ff9500;
+}
+
+.key-zero {
+  width: 150px;
+  grid-column: 1 / span 2;
+  border-radius: 30px;
+}
+
